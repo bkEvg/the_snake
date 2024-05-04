@@ -162,8 +162,10 @@ class Snake(GameObject):
             DOWN,
             RIGHT,
             LEFT
-        ])  # почему мы не должны сбрасывать длинну позицию и направления 
-        # движения, если это по заданию
+        ])
+        self.last = None
+        self.next_direction = None
+        self.positions = [self.position]
         screen.fill(BOARD_BACKGROUND_COLOR)
 
     def draw(self, screen):
